@@ -36,8 +36,8 @@ let checkOrder = () => {
             break;
         }
     }
-    if(clickedOrder.length == order.length){
-        alert('Pontuação: ${score}\nAcertou!');
+    if(clickedOrder.length == order.length) {
+        console.log(`Pontuação: ${score}. Acertou!`);
         nextLevel();
     }
 }
@@ -68,15 +68,15 @@ let nextLevel = () =>{
     shuffleOrder();
 }
 
-let gameOver = () =>{
-    alert('Pontuação: ${score}!\nO jogo acabou\nClique em OK para iniciar um novo jogo');
+let gameOver = () => {
+    console.log(`Pontuação: ${score}. O jogo acabou! Clique em OK para iniciar um novo jogo`);
     order=[];
     clickedOrder=[];
     playGame();
 }
 
 let playGame = () => {
-    alert('Iniciando nova sequencia!');
+    console.log('Iniciando nova sequencia!');
     score = 0;
     nextLevel();
 }
